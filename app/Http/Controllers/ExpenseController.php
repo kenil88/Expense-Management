@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Expense;
 use Illuminate\Http\Request;
 
 class ExpenseController extends Controller
@@ -11,7 +12,8 @@ class ExpenseController extends Controller
      */
     public function index()
     {
-        //
+        $data = Expense::orderBy('id', 'DESC')->get();
+        return view('admin.expense.index', compact('data'));
     }
 
     /**

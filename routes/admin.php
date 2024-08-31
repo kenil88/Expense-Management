@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CollectionController;
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -16,6 +17,6 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(
         Route::resource('user', UserController::class);
         Route::resource('role', RoleController::class);
         Route::resource('permission', PermissionController::class);
-        Route::resource('collection', CollectionController::class);
+        Route::resource('expense', ExpenseController::class);
     });
 });

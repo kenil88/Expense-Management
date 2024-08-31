@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class ExpenseModel extends Model
+class Expense extends Model
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
     /**

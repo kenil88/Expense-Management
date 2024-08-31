@@ -34,7 +34,14 @@
                     </p>
                 </a>
             </li>
-        
+            <li class="nav-item">
+                <a href="{{ route('admin.expense.index') }}"
+                    class="nav-link {{ Route::is('admin.expense.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-hat-cowboy"></i>
+                    <p>Expense
+                    </p>
+                </a>
+            </li>
         @endrole
         <li class="nav-item">
             <a href="{{ route('admin.profile.edit') }}"
