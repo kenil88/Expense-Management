@@ -34,18 +34,7 @@
                     </p>
                 </a>
             </li>
-            
-           
-            <li class="nav-item">
-                <a href="{{ route('admin.collection.index') }}"
-                    class="nav-link {{ Route::is('admin.collection.index') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-file-pdf"></i>
-                    <p>Collection
-                        <span class="badge badge-primary right">{{ $CollectionCount }}</span>
-                    </p>
-                </a>
-            </li>
-            
+        
         @endrole
         <li class="nav-item">
             <a href="{{ route('admin.profile.edit') }}"

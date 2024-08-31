@@ -19,9 +19,6 @@ class Dashboard extends Component
     {
         $user = User::count();
         view()->share('user', $user);
-
-        $collection = Collection::count();
-        view()->share('collection', $collection);
     }
 
     /**

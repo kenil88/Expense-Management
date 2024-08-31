@@ -28,9 +28,6 @@ class Sidebar extends Component
 
         $PermissionCount = Permission::count();
         view()->share('PermissionCount', $PermissionCount);
-
-        $CollectionCount = Collection::count();
-        view()->share('CollectionCount', $CollectionCount);
     }
 
     /**
