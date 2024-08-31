@@ -18,5 +18,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(
         Route::resource('role', RoleController::class);
         Route::resource('permission', PermissionController::class);
         Route::resource('expense', ExpenseController::class);
+
+        Route::post('/admin/expense/generatereport', [ExpenseController::class, 'generateReport'])->name('expense.generateReport');
+        Route::get('/admin/expense/report', [ExpenseController::class, 'showReport'])->name('expense.report');
     });
 });

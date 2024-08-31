@@ -42,6 +42,14 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.expense.report') }}"
+                    class="nav-link {{ Route::is('admin.expense.report') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-hat-cowboy"></i>
+                    <p>Expense Report
+                    </p>
+                </a>
+            </li>
         @endrole
         <li class="nav-item">
             <a href="{{ route('admin.profile.edit') }}"

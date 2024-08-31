@@ -25,9 +25,9 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="supervisor">Select your name</label>
+                                <label for="supervisor">Select your supervisor</label>
                                 <select name="supervisor" class="form-control">
-                                    <option>Select Site</option>
+                                    <option>Select supervisor</option>
                                     <option value="1">Supervisor1</option>
                                     <option value="2">Supervisor 2</option>
                                     <option value="3">Supervisor 3</option>
@@ -49,7 +49,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="supervisor">Type of Expenditure</label>
-                                <select name="supervisor" class="form-control">
+                                <select name="expense_type" class="form-control">
                                     <option>Select Site</option>
                                     <option value="petrol">Petrol</option>
                                     <option value="diesel">Diesel</option>

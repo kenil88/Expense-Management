@@ -11,19 +11,30 @@
             <table class="table table-striped" id="expenseTable">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Site</th>
+                        <th>Supervisor</th>
+                        <th>Expense Date</th>
+                        <th>Expense Rupee</th>
+                        <th>Expense Type</th>
+                        <th>Detail Expsnse</th>
                         <th>Action</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data as $cat)
+                    @foreach ($data as $expense)
                         <tr>
-                            <td>{{ $cat->name }}</td>
-                            <td><a href="{{ route('admin.expense.edit', encrypt($cat->id)) }}"
+                            <td>{{ 'site' . $expense->site }}</td>
+                            <td>{{ 'supervisor' .$expense->supervisor }}</td>
+                            <td>{{ $expense->expense_date }}</td>
+                            <td>{{ $expense->expense_rupee }}</td>
+                            <td>{{ $expense->expense_type }}</td>
+                            <td>{{ $expense->detail_expsnse }}</td>
+                            <td>{{ $expense->remarks }}</td>
+                            <td><a href="{{ route('admin.expense.edit', encrypt($expense->id)) }}"
                                     class="btn btn-sm btn-primary">Edit</a></td>
                             <td>
-                                <form action="{{ route('admin.expense.destroy', encrypt($cat->id)) }}" method="POST"
+                                <form action="{{ route('admin.expense.destroy', encrypt($expense->id)) }}" method="POST"
                                     onsubmit="return confirm('Are sure want to delete?')">
                                     @method('DELETE')
                                     @csrf
@@ -39,7 +50,7 @@
     @section('js')
         <script>
             $(function() {
-                $('#categoryTable').DataTable({
+                $('#expenseTable').DataTable({
                     "paging": true,
                     "searching": true,
                     "ordering": true,
